@@ -2,7 +2,7 @@
 
 ################################################################################
 #  Script that tries to find the path to the gridpack from the DAS dataset name
-#  Copyright (C) <year>  Alberto Mecca (alberto.mecca@cern.ch)
+#  Copyright (C) 2023  Alberto Mecca (alberto.mecca@cern.ch)
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
