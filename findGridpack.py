@@ -72,7 +72,11 @@ def main():
     dataset = dataset_split[0]
     logging.info('Requested dataset: "%s"', dataset)
 
-    mcm = McM(dev=False, debug=args.debug)
+    # Instantiate McM object (API handler)
+    logging.getLogger().setLevel(logging.INFO) # Otherwise no link for authentication will be shown
+    mcm = McM(id='oidc', dev=False, debug=args.debug)
+    logging.getLogger().setLevel(loglevel) # reset logging level
+
     campaign_requests = mcm.get('requests', query='dataset_name={:s}'.format(dataset))
 
     if(not len(campaign_requests) >= 1):
